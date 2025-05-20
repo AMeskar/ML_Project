@@ -1,21 +1,35 @@
-## ENd To END ML Project ##
+## End-to-End ML Project ##
 
 # Agenda
 
-1- We set up the github {repository} ==> How to link it with your VS code project and then u can push ur code to the github directly
+1. Set up the GitHub repository and link it to your VS Code project so you can push your code directly.
 
-{
+```bash
+- git init
+  # Initializes a hidden .git folder to track your code version history
 
- - git init : intialize .git which is a hidden folder that track the version of you code eah time u commit
- - git add README.md 
- - git commit -m "My First Commit" : it create a message in your log file to track what change (.e.g. add), -m to make the message with need of text editor
- - git config --global user.email "Meskar192@gmail.com" & git config --global user.name "AMeskar" : Identifying urself for the firt time
- - git status : give u the status everything u changed
- -git brach -M main: rename ur branch to main and -M force this operation
- - git remote add origin "url": linking ur vs code codes project with git hub
- - git push -u origin main: every change u did in Vs code u can push it to the repository in github remotely, -u is upstream, further understanding in the futur
+- git add README.md
+  # Adds the README file to the staging area
 
-}
+- git commit -m "My First Commit"
+  # Creates a commit with a message describing the change (-m is for message)
+
+- git config --global user.email "Meskar192@gmail.com"
+  git config --global user.name "AMeskar"
+  # Identifies yourself to Git for the first time (this is global)
+
+- git status
+  # Shows the current state of your working directory (what's staged, what’s not)
+
+- git branch -M main
+  # Renames your current branch to 'main' (forcefully with -M)
+
+- git remote add origin "url"
+  # Links your local VS Code project to your GitHub repository
+
+- git push -u origin main
+  # Pushes your code to GitHub, and -u sets the upstream so future pushes are easier
+
 
 2- Seting the environments == Python 3.8
 {
