@@ -14,10 +14,14 @@ path_log_file = os.path.join(path_logf, Log_F) # create the whole path with the 
 
 logging.basicConfig(
     
-    filename= path_logf, # Take the path of the filename created
+    filename= path_log_file, # Take the path of the filename created
     
-    format= "{asctime} - {levelname} - {message}", # the format base of the message
+    format= "[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s", # the format base of the message
     
-    level = logging.INFO(), # level mean which info the log will give u, .INFO, .DEBUG, .ERROR
+    level = logging.INFO, # level mean which info the log will give u, .INFO, .DEBUG, .ERROR
     
 )
+
+if __name__ == '__main__':
+    
+    logging.info("Logging getting started")
