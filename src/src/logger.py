@@ -16,8 +16,12 @@ logging.basicConfig(
     
     filename= path_log_file, # Take the path of the filename created
     
-    format= "[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s", # the format base of the message, Time the log message was created, line number, name of the file, level of logging and the message
+    format= "[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s", # the format base of the message
     
     level = logging.INFO, # level mean which info the log will give u, .INFO, .DEBUG, .ERROR
     
 )
+
+if __name__ == '__main__':
+    
+    logging.info("Logging getting started")
