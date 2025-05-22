@@ -3,6 +3,7 @@
 from abc import ABC, abstractmethod
 import zipfile
 from src.exception import CustomizeExcep
+from src.logger import logging
 import pandas as pd
 import os
 
@@ -32,6 +33,8 @@ class ZipFileReader(DataIngestion):
         
         '''
         
+        logging.info('Reading the zip file')
+        
         with zipfile.ZipFile(file_path, 'r') as F:
             
             csv_files = F.extractall('Extracted_zipdata')
@@ -60,6 +63,7 @@ class csvFileReader(DataIngestion):
         retun: List of files
         
         '''
+        logging.info('Create the Data Frame')
         
         df = pd.read_csv(file_path)
         
@@ -76,6 +80,8 @@ class TypeFile:
         
         '''
         
+        logging.info('Reading the extention of the file')
+        
         file_ext = os.path.splitext(file_path)[1]
   
         if file_ext.endswith('.zip'):
@@ -85,3 +91,4 @@ class TypeFile:
         elif file_ext.endswith('.csv'):
 
             return csvFileReader().Ingest(file_path=file_path)
+
